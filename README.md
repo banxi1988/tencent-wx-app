@@ -1,10 +1,10 @@
-# tencent-wx-app
+# wechat-mp-types
 微信小程序 DefinitelyTyped.
 
 # Install
 
 ```
-npm i tencent-wx-app --save-dev
+npm i wechat-mp-types --save-dev
 ```
 
 # How to Use
@@ -15,7 +15,7 @@ npm i tencent-wx-app --save-dev
 {
 	"compilerOptions": {
 		"types": [
-			"tencent-wx-app"
+			"wechat-mp-types"
 		]
 	}
 }

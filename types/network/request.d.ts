@@ -63,6 +63,12 @@ declare namespace wx {
         header?: RequestHeader;
 
         /**
+         * GET	（需大写）有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+         * @default GET
+         */
+        method?: Method;
+
+        /**
          * 如果设为json，会尝试对返回的数据做一次 JSON.parse
          * @default json
          */
