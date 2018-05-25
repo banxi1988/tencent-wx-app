@@ -1,0 +1,12 @@
+import "./accelerometer";
+import "./bluetooth";
+import "./campass";
+import "./clipboard";
+import "./ibeacon";
+import "./networkinfo";
+import "./phone-contact";
+import "./phonecall";
+import "./scancode";
+import "./screen";
+import "./systeminfo";
+import "./vibrate";
