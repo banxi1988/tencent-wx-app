@@ -1,6 +1,6 @@
 {
 	"name": "wechat-mp-types",
-	"version": "1.1.201805251649",
+	"version": "1.1.201805251848",
 	"description": "微信小程序",
 	"types": "./index.d.ts",
 	"repository": {
