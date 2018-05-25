@@ -40,7 +40,10 @@ declare namespace wx {
         abort():void;
     }
 
-    interface RequestOptions extends BaseOptions {
+    /**
+     * 纯请求对象， 可以用来作为封装 Promise 返回类型的参数对象。
+     */
+    interface Request{
         /**
     * 开发者服务器接口地址
     */
@@ -71,6 +74,10 @@ declare namespace wx {
          * @default text
          */
         responseType?: ResponseType;
+    }
+
+
+    interface RequestOptions extends Request,BaseOptions {
         /** 收到开发者服务成功返回的回调函数，res = {data: '开发者服务器返回的内容'} */
         success?(res: Response): void;
     }
