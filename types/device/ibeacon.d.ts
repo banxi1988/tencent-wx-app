@@ -3,7 +3,7 @@
 declare namespace wx {
     interface StartBeaconOptions extends BaseOptions {
         uuids: string[];	// iBeacon设备广播的 uuids
-        success?(ret: { errMsg: string; }): void;
+        success?(ret: BaseResponse): void;
     }
 	/**
 	 * 开始搜索附近的iBeacon设备
@@ -11,7 +11,7 @@ declare namespace wx {
     function startBeaconDiscovery(options: StartBeaconOptions): void;
 
     interface StopBeaconOptions extends BaseOptions {
-        success?(ret: { errMsg: string; }): void;
+        success?(ret: BaseResponse): void;
     }
 	/**
 	 * 停止搜索附近的iBeacon设备
@@ -27,8 +27,11 @@ declare namespace wx {
         rssi: number;	// 表示设备的信号强度
     }
 
+    interface GetBeaconResponse extends BaseResponse {
+        beacons: Beacon[];
+    }
     interface GetBeaconOptions extends BaseOptions {
-        success?(ret: { beacons: Beacon[]; errMsg?: string; }): void;
+        success?(ret:  GetBeaconResponse): void;
     }
 	/**
 	 * 获取所有已搜索到的iBeacon设备

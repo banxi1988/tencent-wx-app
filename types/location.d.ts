@@ -97,17 +97,20 @@ declare namespace wx {
         padding?: [number, number, number, number];	// 坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的padding一致。开发者工具暂不支持padding参数。
     }
 
-    interface GetRegionOptions extends BaseOptions {
-        success?(res: {
+    interface GetRegionResponse{
             southwest: number;	// 西南角的经纬度
             northeast: number;	// 东北角的经纬度
-        }): void;
     }
 
-    interface GetScaleOptions extends BaseOptions {
-        success?(res: {
+    interface GetRegionOptions extends BaseOptions {
+        success?(res: GetRegionResponse): void;
+    }
+
+    interface GetScaleResponse{
             scale: number;
-        }): void;
+    }
+    interface GetScaleOptions extends BaseOptions {
+        success?(res: GetScaleResponse): void;
     }
 	/**
 	 * mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。

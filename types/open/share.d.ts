@@ -21,13 +21,14 @@ declare namespace wx {
 	 */
     function updateShareMenu(options?: ShareMenuOptions): void;
 
-    interface ShareInfoOptions extends BaseOptions {
-        shareTicket: string;
-        success?(res: {
-            errMsg: string;	// 错误信息
+	interface ShareInfoResponse extends BaseResponse{
             encryptedData: string;	// 包括敏感数据在内的完整转发信息的加密数据，详细见加密数据解密算法
             iv: string;	// 加密算法的初始向量，详细见加密数据解密算法
-        }): void;
+	}
+
+    interface ShareInfoOptions extends BaseOptions {
+        shareTicket: string;
+        success?(res: ShareInfoResponse): void;
     }
 	/**
 	 * 获取转发详细信息

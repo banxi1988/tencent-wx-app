@@ -10,10 +10,13 @@ declare namespace wx {
         'scope.record': boolean;
         'scope.writePhotosAlbum': boolean;
     }
-    interface SettingOptions extends BaseOptions {
-        success?(res: {
+
+    interface SettingsResponse{
             authSetting: AuthSetting
-        }): void;
+    }
+
+    interface SettingOptions extends BaseOptions {
+        success?(res: SettingsResponse): void;
     }
 	/**
 	 * 调起客户端小程序设置界面，返回用户设置的操作结果。

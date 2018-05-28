@@ -1,9 +1,10 @@
 // 第三方平台
 declare namespace wx {
+    interface GetExtConfigResponse{
+            extConfig?: any;
+    }
     interface GetExtConfigOption extends BaseOptions {
-        success?(ret: {
-            errMsg: string; extConfig?: any;
-        }): void;
+        success?(ret: GetExtConfigResponse): void;
     }
 	/**
 	 * 获取第三方平台自定义的数据字段。

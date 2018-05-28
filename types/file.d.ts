@@ -93,14 +93,15 @@ declare namespace wx {
 	 */
     function openDocument(options: OpenDocumentOptions): void;
 
+    interface GetFileInfoResponse extends BaseResponse{
+            size: number;	// 文件大小，单位：B
+            digest: string;	// 按照传入的 digestAlgorithm 计算得出的的文件摘要
+    }
+
     interface GetFileInfoOptions extends BaseOptions {
         filePath: string;	// 本地文件路径
         digestAlgorithm?: 'md5' | 'sha1';	// 计算文件摘要的算法，默认值 md5，有效值：md5，sha1
-        success?(res: {
-            size: number;	// 文件大小，单位：B
-            digest: string;	// 按照传入的 digestAlgorithm 计算得出的的文件摘要
-            errMsg: string;	// 调用结果
-        }): void;	//接口调用成功的回调函数
+        success?(res: GetFileInfoResponse): void;	//接口调用成功的回调函数
     }
 
     function getFileInfo(options: GetFileInfoOptions): void;

@@ -1,16 +1,23 @@
 // 媒体-----相机组件控制
 declare namespace wx {
+    interface TakePhotoResponse{
+        tempImagePath: string; 
+    }
     interface TakePhotoOptions extends BaseOptions {
         quality?: 'high' | 'normal' | 'low';	// 成像质量，值为high, normal, low，默认normal
-        success?(res: { tempImagePath: string; }): void;
+        success?(res: TakePhotoResponse): void;
     }
 
     interface StartRecordOptions extends BaseOptions {
         timeoutCallback?(res: { tempThumbPath: string; tempVideoPath: string; }): void;	// 超过30s或页面onHide时会结束录像，res = { tempThumbPath, tempVideoPath }
     }
 
+    interface StopRecordResponse{
+        tempThumbPath: string;
+        tempVideoPath: string; 
+    }
     interface StopRecordOptions extends BaseOptions {
-        success?(res: { tempThumbPath: string; tempVideoPath: string; }): void;
+        success?(res: StopRecordResponse): void;
     }
     interface CameraContext {
         takePhoto(options: TakePhotoOptions): void;	// 拍照，可指定质量，成功则返回图片

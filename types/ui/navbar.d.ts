@@ -31,9 +31,7 @@ declare namespace wx {
             duration: number;					// 动画变化时间，默认0，单位：毫秒
             timingFunc: AnimationTimingFunc;	// 动画变化方式，默认 linear
         }>;
-        success?(res: {
-            errMsg: string;	// 调用结果
-        }): void;
+        success?(res: BaseResponse): void;
     }
     function setNavigationBarColor(options: SetNavigationBarColorOptions): void;
 }

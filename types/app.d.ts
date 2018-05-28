@@ -106,13 +106,15 @@ declare namespace wx {
         errMsg: 'ok' | string;
     }
 
+    interface ShareMessageResponse{
+        shareTickets: string[];
+    }
+
     interface ShareMessage extends BaseOptions {
         title?: string;	// 转发标题	当前小程序名称
         path?: string;	// 转发路径	当前页面 path ，必须是以 / 开头的完整路径
         imageUrl?: string;	// 自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径，支持PNG及JPG，不传入 imageUrl 则使用默认截图。iOS 显示图片长宽比是 5:4，Android 显示图片长宽比是 215:168。高度超出部分会从底部裁剪。推荐使用 Android 图片长宽比，可保证图片在两个平台都完整显示，其中 iOS 底部会出现一小段白色		1.5.0
-        success?(res: {
-            shareTickets: string[];
-        }): void;
+        success?(res: ShareMessageResponse): void;
     }
 
     interface PageOptions {

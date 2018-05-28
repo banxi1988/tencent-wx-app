@@ -45,7 +45,18 @@ declare namespace wx {
 	/**
 	 * 隐藏消息提示框
 	 */
-    function hideLoading(): void;
+	function hideLoading(): void;
+	
+	interface ModalResponse{
+			/**
+			 * 为 true 时，表示用户点击了确定按钮
+			 */
+            confirm: boolean;
+			/**
+			 * 为 true 时，表示用户点击了取消（用于 Android 系统区分点击蒙层关闭还是点击取消按钮关闭）
+			 */
+            cancel: boolean;
+	}
 
     interface ModalOptions extends BaseOptions {
 		/**
@@ -76,16 +87,7 @@ declare namespace wx {
 		 * 确定按钮的文字颜色，默认为"#3CC51F"
 		 */
         confirmColor?: string;
-        success?(res: {
-			/**
-			 * 为 true 时，表示用户点击了确定按钮
-			 */
-            confirm: boolean;
-			/**
-			 * 为 true 时，表示用户点击了取消（用于 Android 系统区分点击蒙层关闭还是点击取消按钮关闭）
-			 */
-            cancel: boolean;
-        }): void;
+        success?(res: ModalResponse): void;
     }
 	/**
 	 * 显示模态弹窗
