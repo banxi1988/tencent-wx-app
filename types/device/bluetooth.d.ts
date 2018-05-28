@@ -1,5 +1,5 @@
 // 设备-----蓝牙
-declare namespace wx {
+ declare namespace wx {
     interface OpenBluetoothAdapterOptions extends BaseOptions {
         success(res: any): void;
     }

@@ -1,6 +1,6 @@
 
 // 设备-----剪贴板
-declare namespace wx {
+ declare namespace wx {
     interface SetClipboardDataOptions extends BaseOptions {
         data: string;
     }

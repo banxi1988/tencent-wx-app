@@ -1,6 +1,6 @@
 
 // 上传下载
-declare namespace wx {
+ declare namespace wx {
     interface UploadFileResponse {
         data: string;		// 开发者服务器返回的数据
         statusCode: number;	// 开发者服务器返回的 HTTP 状态码

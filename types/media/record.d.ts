@@ -1,5 +1,5 @@
 // 媒体-----录音管理
-declare namespace wx {
+ declare namespace wx {
     interface RecordManager {
         start(options: {
             duration?: number;	// 指定录音的时长，单位 ms ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）

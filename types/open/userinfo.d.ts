@@ -1,5 +1,5 @@
 // 开放接口-----用户信息
-declare namespace wx {
+ declare namespace wx {
     interface UserInfo {
         nickName: string;
         avatarUrl: string;

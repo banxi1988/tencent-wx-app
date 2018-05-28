@@ -1,5 +1,5 @@
 // 媒体-----图片
-declare namespace wx {
+ declare namespace wx {
     type ImageSizeType = 'original' | 'compressed';
     type ImageSourceType = 'album' | 'camera';
     type VideoSourceType = 'album' | 'camera';

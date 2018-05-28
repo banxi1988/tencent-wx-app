@@ -1,6 +1,6 @@
 
 // 媒体-----视频
-declare namespace wx {
+ declare namespace wx {
     interface VideoData {
         /** 选定视频的临时文件路径 */
         tempFilePath: string;
@@ -40,7 +40,7 @@ declare namespace wx {
 }
 
 // 媒体-----视频组件控制
-declare namespace wx {
+ declare namespace wx {
     interface VideoContext {
 		/**
 		 * 播放

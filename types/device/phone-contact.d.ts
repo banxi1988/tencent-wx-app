@@ -1,5 +1,5 @@
 // 设备-----手机联系人
-declare namespace wx {
+ declare namespace wx {
     interface PhoneContact extends BaseOptions {
         photoFilePath?: string;	// 头像本地文件路径
         nickName?: string;	// 昵称

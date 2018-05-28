@@ -1,5 +1,5 @@
 // WebSocket
-declare namespace wx {
+ declare namespace wx {
     interface ConnectSocketOptions extends BaseOptions {
         /** 开发者服务器接口地址，必须是 HTTPS 协议，且域名必须是后台配置的合法域名 */
         url: string;

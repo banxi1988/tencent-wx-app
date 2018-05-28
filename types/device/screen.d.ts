@@ -1,5 +1,5 @@
 // 设备-----屏幕亮度
-declare namespace wx {
+ declare namespace wx {
     interface SetScreenBrightnessOptions extends BaseOptions {
         value: number;	// 屏幕亮度值，范围 0~1，0 最暗，1 最亮
     }
@@ -30,6 +30,6 @@ declare namespace wx {
 }
 
 // 设备-----用户截屏事件
-declare namespace wx {
+ declare namespace wx {
     function onUserCaptureScreen(callback: () => void): void;
 }

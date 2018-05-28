@@ -1,6 +1,6 @@
 
 // 设备-----系统信息
-declare namespace wx {
+ declare namespace wx {
     interface SystemInfo {
         brand: string;	// 手机品牌
         /** 手机型号 */

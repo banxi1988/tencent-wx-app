@@ -1,6 +1,6 @@
 
 // 设备-----拨打电话
-declare namespace wx {
+ declare namespace wx {
     interface MakePhoneCallOptions extends BaseOptions {
 		/**
 		 * 需要拨打的电话号码

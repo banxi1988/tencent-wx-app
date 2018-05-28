@@ -1,5 +1,5 @@
 // 媒体-----背景音乐播放管理
-declare namespace wx {
+ declare namespace wx {
     interface BackgroundAudioManager {
         readonly duration: number;	// 当前音频的长度（单位：s），只有在当前有合法的 src 时返回
         readonly currentTime: number;	// 当前音频的播放位置（单位：s），只有在当前有合法的 src 时返回
@@ -37,7 +37,7 @@ declare namespace wx {
 }
 
 // 媒体-----音频组件控制
-declare namespace wx {
+ declare namespace wx {
     interface InnerAudioContext {
         src: string;	// 音频的数据链接，用于直接播放。
         startTime: number;	// 开始播放的位置（单位：s），默认 0

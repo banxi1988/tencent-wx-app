@@ -1,5 +1,5 @@
 // 设备-----扫码
-declare namespace wx {
+ declare namespace wx {
     type scanType = "qrCode" | "barCode" | "datamatrix" | "pdf417";
     interface ScanCodeData {
 		/**

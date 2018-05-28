@@ -1,5 +1,5 @@
 // 开放接口-----卡券
-declare namespace wx {
+ declare namespace wx {
     interface CardExt {
         code?: string	// 参与签名	用户领取的 code，仅自定义 code 模式的卡券须填写，非自定义 code 模式卡券不可填写，详情
         openid?: string	// 参与签名	指定领取者的openid，只有该用户能领取。 bind_openid 字段为 true 的卡券必须填写，bind_openid 字段为 false 不可填写。

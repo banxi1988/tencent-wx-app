@@ -1,5 +1,5 @@
 // 设备-----网络状态
-declare namespace wx {
+ declare namespace wx {
     type networkType = '2g' | '3g' | '4g' | 'wifi' | 'unknown' | 'none';
     interface NetworkTypeData {
         /** 返回网络类型2g，3g，4g，wifi */

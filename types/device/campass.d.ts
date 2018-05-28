@@ -1,6 +1,6 @@
 
 // 设备-----罗盘
-declare namespace wx {
+ declare namespace wx {
     interface CompassData {
         /** 面对的方向度数 */
         direction: number;

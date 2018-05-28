@@ -1,5 +1,5 @@
 // 开放接口-----微信支付
-declare namespace wx {
+ declare namespace wx {
     type PaymentSignType = 'MD5';
     interface RequestPaymentOptions extends BaseOptions {
         /** 时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间 */

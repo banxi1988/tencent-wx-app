@@ -1,5 +1,5 @@
 // 设备-----加速度计
-declare namespace wx {
+ declare namespace wx {
     interface AccelerometerData {
         /** X 轴 */
         x: number;
