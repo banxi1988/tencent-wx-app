@@ -1,3 +1,3 @@
-npm version '1.1.'$(date +%Y%m%d%H%M)
+npm version patch
 npm publish
 git push

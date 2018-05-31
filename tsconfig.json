@@ -7,9 +7,10 @@
     "strictNullChecks": true,
     "baseUrl": "./",
     "typeRoots": ["./types"],
+    "moduleResolution": "node",
     "types": [],
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.d.ts"]
+  "include": ["**/*.d.ts", "test/*.ts"]
 }

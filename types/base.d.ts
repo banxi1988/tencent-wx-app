@@ -1,4 +1,14 @@
 declare namespace wx {
+  /**
+   * 16 进制颜色类型 如 "#000000" 表示黑色。
+   */
+  type HexColor = string;
+
+  /**
+   * 单位像素
+   */
+  type Pixel = number;
+
   interface BaseOptions {
     /** 接口调用成功的回调函数 */
     success?(res: any): void;

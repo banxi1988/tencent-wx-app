@@ -6,4 +6,5 @@ import "./pulldown";
 import "./react";
 import "./scroll";
 import "./topbar";
+import "./tabbar";
 import "./wxml";

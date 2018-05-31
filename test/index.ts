@@ -1,0 +1,1 @@
+const lp: wx.LoginOptions = {};
