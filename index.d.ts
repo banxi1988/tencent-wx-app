@@ -12,3 +12,4 @@ import "./types/network";
 import "./types/media";
 import "./types/device";
 import "./types/open";
+import "./types/mpconfig";
