@@ -1,5 +1,5 @@
 // 数据缓存
- declare namespace wx {
+declare namespace wx {
   interface SetStorageOptions extends BaseOptions {
     /** 本地缓存中的指定的 key */
     key: string;
@@ -24,7 +24,7 @@
     /** 本地缓存中的指定的 key */
     key: string;
     /** 接口调用的回调函数,res = {data: key对应的内容} */
-    success(res: DataResponse): void;
+    success?(res: DataResponse): void;
   }
   /**
    * 从本地缓存中异步获取指定 key 对应的内容。
@@ -54,7 +54,7 @@
     limitSize: number;
   }
   interface GetStorageInfoOptions extends BaseOptions {
-    success(res: StorageInfo): void;
+    success?(res: StorageInfo): void;
   }
   /**
    * 异步获取当前storage的相关信息

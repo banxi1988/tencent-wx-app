@@ -24,7 +24,7 @@
 
     interface SetKeepScreenOnOptions extends BaseOptions {
         keepScreenOn: boolean;
-        success(errMsg: string): void;
+        success?(errMsg: string): void;
     }
     function setKeepScreenOn(options: SetKeepScreenOnOptions): void;
 }

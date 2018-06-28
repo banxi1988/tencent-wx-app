@@ -7,7 +7,7 @@
     }
     interface GetNetworkTypeOptions extends BaseOptions {
         /** 接口调用成功，返回网络类型 networkType */
-        success(res: NetworkTypeData): void;
+        success?(res: NetworkTypeData): void;
     }
 	/**
 	 * 获取网络类型。

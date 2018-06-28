@@ -19,7 +19,7 @@ declare namespace wx {
     type?: "wgs84" | "gcj02";
     altitude?: boolean; // 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度
     /** 接口调用成功的回调函数，返回内容详见返回参数说明。 */
-    success(res: LocationData): void;
+    success?(res: LocationData): void;
   }
   /**
    * 获取当前的地理位置、速度。
@@ -45,7 +45,7 @@ declare namespace wx {
     longitude: number;
   }
   interface ChooseLocationOptions extends BaseOptions {
-    success(res: ChooseLocationData): void;
+    success?(res: ChooseLocationData): void;
   }
   /**
    * 打开地图选择位置
@@ -80,7 +80,7 @@ declare namespace wx {
     latitude: number;
   }
   interface GetCenterLocationOptions extends BaseOptions {
-    success(res: Position): void;
+    success?(res: Position): void;
   }
 
   interface TranslateMarkerOptions extends BaseOptions {
