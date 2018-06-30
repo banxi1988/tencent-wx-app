@@ -14,3 +14,4 @@ import "./types/device";
 import "./types/open";
 import "./types/mpconfig";
 import "./types/log";
+import "./types/threads";

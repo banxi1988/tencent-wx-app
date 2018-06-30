@@ -9,6 +9,8 @@ declare namespace wx {
    */
   type Pixel = number;
 
+  type PlainObject = { [key: string]: any };
+
   interface BaseOptions {
     /** 接口调用成功的回调函数 */
     success?(res: any): void;
