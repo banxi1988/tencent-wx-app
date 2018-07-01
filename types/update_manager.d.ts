@@ -43,6 +43,8 @@ declare namespace wx {
    * @tips 
     1. 微信开发者工具上可以通过「编译模式」下的「下次编译模拟更新」开关来调试
     2. 小程序开发版/体验版没有「版本」概念，所以无法在开发版/体验版上测试更版本更新情况
+
+    @since 1.9.90
    */
   function getUpdateManager(): UpdateManager;
 }
