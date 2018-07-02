@@ -1,5 +1,4 @@
 // 发起请求
-
 declare namespace wx {
   /**
    * HTTP 请求方法
@@ -34,12 +33,14 @@ declare namespace wx {
      *
      * @since 1.2.0
      */
-    header: object;
+    header: HttpHeader;
   }
 
-  interface RequestHeader {
+  interface HttpHeader {
     [key: string]: string;
   }
+
+  type RequestHeader = HttpHeader;
 
   interface RequestTask {
     /**
@@ -56,19 +57,28 @@ declare namespace wx {
      * 开发者服务器接口地址
      */
     url: string;
+
     /**
-         * 请求的参数
-         * 最终发送给服务器的数据是 String 类型，如果传入的 data 不是 String 类型，会被转换成 String 。转换规则如下：
-          对于 GET 方法的数据，会将数据转换成 query string（encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）
-          对于 POST 方法且 header['content-type'] 为 application/json 的数据，会对数据进行 JSON 序列化
-          对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）
-         */
+     * 请求的参数
+     *
+     * 最终发送给服务器的数据是 String 类型，如果传入的 data 不是 String 类型，会被转换成
+     * `String` 。转换规则如下：
+     * - 对于 `GET` 方法的数据，会将数据转换成 query string
+     * （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）
+     * - 对于 `POST` 方法且 `header['content-type']` 为 `application/json` 的数据，
+     * 会对数据进行 JSON 序列化
+     * - 对于 `POST` 方法且 `header['content-type']` 为 `application/x-www-form-urlencoded`
+     *  的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）
+     *
+     * Tips:
+     * 1. `content-type` 默认为 `application/json`;
+     */
     data?: RequestDataType;
 
     /**
      * 设置请求的 header，header 中不能设置 Referer。
      */
-    header?: RequestHeader;
+    header?: HttpHeader;
 
     /**
      * GET	（需大写）有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
