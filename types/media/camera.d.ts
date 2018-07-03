@@ -1,5 +1,6 @@
 // 媒体-----相机组件控制
 declare namespace wx {
+  type CameraDevice = "front" | "back";
   interface TakePhotoResponse {
     tempImagePath: string;
   }

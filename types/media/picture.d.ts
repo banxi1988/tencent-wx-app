@@ -2,8 +2,7 @@
 declare namespace wx {
   type ImageSizeType = "original" | "compressed";
   type ImageSourceType = "album" | "camera";
-  type VideoSourceType = "album" | "camera";
-  type CameraDevice = "front" | "back";
+
 
   interface ChooseImageResponse {
     /**
