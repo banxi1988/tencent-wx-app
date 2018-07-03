@@ -1,3 +1,1 @@
-npm version patch
-npm publish
-git push
+npm version patch && yarn publish && git push
