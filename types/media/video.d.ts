@@ -82,12 +82,20 @@ declare namespace wx {
     color: number | string;
   }
 
+  const enum Direction {
+    up = 0,
+    down = 90,
+    downMirrored = -90
+  }
+
   interface RequestFullScreenOptions {
     /**
      * 设置全屏时视频的方向，不指定则根据宽高比自动判断。
      * 有效值为 0（正常竖向）, 90（屏幕逆时针90度）, -90（屏幕顺时针90度）
+     * @since 1.7.0
      */
-    direction: 0 | 90 | -90;
+
+    direction: Direction;
   }
   interface VideoContext {
     /**

@@ -2,13 +2,6 @@
  * 多媒体 - 实时音视频
  */
 declare namespace wx {
-  interface RequestFullScreenOptions extends BaseOptions {
-    /**
-     * 有效值为 0（正常竖向）, 90（屏幕逆时针90度）, -90（屏幕顺时针90度）
-     */
-    direction?: 0 | 90 | -90;
-  }
-
   interface LivePlayerContext {
     /**
      * 播放

@@ -8,7 +8,7 @@
     "url": "git+https://github.com/banxi1988/wechat-mp-types.git"
   },
   "scripts": {
-    "test": "tsc"
+    "test": "tsc -p test/"
   },
   "keywords": [
     "微信",
