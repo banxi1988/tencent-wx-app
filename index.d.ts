@@ -7,11 +7,15 @@ import "./types/location";
 import "./types/others";
 import "./types/storage";
 
+// folders
 import "./types/ui";
 import "./types/network";
 import "./types/media";
 import "./types/device";
 import "./types/open";
+
 import "./types/mpconfig";
 import "./types/log";
 import "./types/threads";
+import "./types/update_manager";
+import "./types/account-info";
