@@ -10,3 +10,5 @@ import "./scancode";
 import "./screen";
 import "./systeminfo";
 import "./vibrate";
+import "./nfc";
+import "./wifi";

@@ -10,11 +10,25 @@
         package: string;
         /** 签名算法，暂支持 MD5 */
         signType: PaymentSignType;
-        /** 签名,具体签名方案参见微信公众号支付帮助文档; */
+        /** 签名,具体签名方案参见 [小程序支付接口文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=3); */
         paySign: string;
     }
 	/**
 	 * 发起微信支付。
+     * @example
+```js
+wx.requestPayment({
+   'timeStamp': '',
+   'nonceStr': '',
+   'package': '',
+   'signType': 'MD5',
+   'paySign': '',
+   'success':function(res){
+   },
+   'fail':function(res){
+   }
+})
+```
 	 */
     function requestPayment(options: RequestPaymentOptions): void;
 }

@@ -17,14 +17,10 @@
     type AccelerometerOptions = BaseOptions;
 	/**
 	 * 开始监听加速度数据。
-	 * 基础库版本 1.1.0 开始支持，低版本需做兼容处理
-	 * 微信客户端 6.5.6 版本开始支持
 	 */
     function startAccelerometer(options: AccelerometerOptions): void;
 	/**
 	 * 停止监听加速度数据。
-	 * 基础库版本 1.1.0 开始支持，低版本需做兼容处理
-	 * 微信客户端 6.5.6 版本开始支持
 	 */
     function stopAccelerometer(options: AccelerometerOptions): void;
 }

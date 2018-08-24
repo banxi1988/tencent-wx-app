@@ -12,3 +12,4 @@ import "./share";
 import "./soter-auth";
 import "./userinfo";
 import "./we-run";
+import "./account-info";

@@ -18,4 +18,3 @@ import "./types/mpconfig";
 import "./types/log";
 import "./types/threads";
 import "./types/update_manager";
-import "./types/account-info";

@@ -5,28 +5,23 @@ declare namespace wx {
   interface LivePlayerContext {
     /**
      * 播放
-     * @param options BaseOptions
      */
     play(options: BaseOptions): void;
     /**
      * 停止
-     * @param options BaseOptions
      */
     stop(options: BaseOptions): void;
     /**
      * 静音
-     * @param options BaseOptions
      */
     mute(options: BaseOptions): void;
     /**
      * 暂停
-     * @param options BaseOptions
      * @since 1.9.90
      */
     pause(options: BaseOptions): void;
     /**
      * 恢复
-     * @param options BaseOptions
      * @since 1.9.90
      */
     resume(options: BaseOptions): void;
@@ -37,7 +32,6 @@ declare namespace wx {
     requestFullScreen(options: RequestFullScreenOptions): void;
     /**
      * 退出全屏
-     * @param options BaseOptions
      */
     exitFullScreen(options: BaseOptions): void;
   }
@@ -56,22 +50,18 @@ declare namespace wx {
   interface LivePushContext {
     /**
      * 播放推流
-     * @param options BaseOptions
      */
     start(options: BaseOptions): void;
     /**
      * 停止推流
-     * @param options BaseOptions
      */
     stop(options: BaseOptions): void;
     /**
      * 暂停推流
-     * @param options BaseOptions
      */
     pause(options: BaseOptions): void;
     /**
      * 恢复推流
-     * @param options BaseOptions
      */
     resume(options: BaseOptions): void;
     /**

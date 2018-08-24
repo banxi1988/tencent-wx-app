@@ -8,3 +8,4 @@ import "./scroll";
 import "./topbar";
 import "./tabbar";
 import "./wxml";
+import "./custom-component";
