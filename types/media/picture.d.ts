@@ -3,6 +3,16 @@ declare namespace wx {
   type ImageSizeType = "original" | "compressed";
   type ImageSourceType = "album" | "camera";
 
+  interface ChoosedFile {
+    /**
+     * 本地文件路径
+     */
+    path: string;
+    /**
+     * 本地文件大小，单位：B
+     */
+    size: number;
+  }
 
   interface ChooseImageResponse {
     /**
@@ -15,7 +25,7 @@ declare namespace wx {
      * @since 1.2.0
      *
      */
-    tempFiles: File[];
+    tempFiles: ChoosedFile[];
   }
 
   /**
