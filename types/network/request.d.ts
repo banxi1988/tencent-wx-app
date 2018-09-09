@@ -36,6 +36,8 @@ declare namespace wx {
     header: HttpHeader;
   }
 
+  export type RequestResponse = Response;
+
   interface HttpHeader {
     [key: string]: string;
   }

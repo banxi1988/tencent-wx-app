@@ -52,16 +52,16 @@ declare namespace wx {
     rssi: number;
   }
 
-  interface GetBeaconResponse extends BaseResponse {
+  interface GetBeaconsResponse extends BaseResponse {
     beacons: Beacon[];
   }
-  interface GetBeaconOptions extends BaseOptions {
-    success?(ret: GetBeaconResponse): void;
+  interface GetBeaconsOptions extends BaseOptions {
+    success?(ret: GetBeaconsResponse): void;
   }
   /**
    * 获取所有已搜索到的iBeacon设备
    */
-  function getBeacons(options: GetBeaconOptions): void;
+  function getBeacons(options: GetBeaconsOptions): void;
 
   function onBeaconUpdate(callback: (beacons: Beacon[]) => void): void;
   interface OnBeaconServiceChangeResponse {

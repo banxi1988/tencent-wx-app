@@ -194,7 +194,7 @@ declare namespace wx {
     /**
      * 获取当前地图中心的经纬度，返回的是 `gcj02` 坐标系，可以用于 `wx.openLocation`
      */
-    getCenterLocation(options: GetCenterLocationOptions): OpenLocationOptions;
+    getCenterLocation(options: GetCenterLocationOptions): void;
 
     /**
      * 将地图中心移动到当前定位点，需要配合 `map`组件的 `show-location` 使用

@@ -1,6 +1,6 @@
 // 设备-----手机联系人
 declare namespace wx {
-  interface PhoneContact extends BaseOptions {
+  interface AddPhoneContactOptions extends BaseOptions {
     /**
      * 头像本地文件路径
      */
@@ -135,5 +135,5 @@ declare namespace wx {
    * 调用后，用户可以选择将该表单以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
    * @param options PhoneContact
    */
-  function addPhoneContact(options: PhoneContact): void;
+  function addPhoneContact(options: AddPhoneContactOptions): void;
 }

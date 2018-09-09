@@ -36,7 +36,7 @@ declare namespace wx {
    *  判断当前设备是否支持 HCE 能力。
    * @since 1.7.0
    */
-  function getHCEState(options: BaseOptions): void;
+  function getHCEState(options: GetHCEStateOptions): void;
 
   interface StartHCEOptions extends BaseOptions {
     /**

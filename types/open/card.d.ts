@@ -65,17 +65,22 @@ declare namespace wx {
   interface AddCardResponse {
     cardList: CardResult[];
   }
-  interface CardOptions extends BaseOptions {
+  interface AddCardOptions extends BaseOptions {
     /**
      * 需要添加的卡券列表，
      */
     cardList: Card[];
     success(res: AddCardResponse): void;
   }
+
+  /**
+   * @deprecated
+   */
+  export type CardOptions = AddCardOptions;
   /**
    * 批量添加卡券。
    */
-  function addCard(options: CardOptions): void;
+  function addCard(options: AddCardOptions): void;
 
   interface OpenCardItem {
     /**

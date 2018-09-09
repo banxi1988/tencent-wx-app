@@ -1,19 +1,22 @@
 // 设备-----屏幕亮度
 declare namespace wx {
-  interface SetScreenBrightnessOptions extends BaseOptions {
-    value: number; // 屏幕亮度值，范围 0~1，0 最暗，1 最亮
+  interface ScreenBrightness {
+    /**
+     * 屏幕亮度值，范围 0~1，0 最暗，1 最亮
+     */
+    value: number;
   }
+  interface SetScreenBrightnessOptions extends BaseOptions, ScreenBrightness {}
 
   /**
    * 设置屏幕亮度。
    */
   function setScreenBrightness(options: SetScreenBrightnessOptions): void;
 
+  interface GetScreenBrightnessResponse extends ScreenBrightness {}
+
   interface GetScreenBrightnessOptions extends BaseOptions {
-    /**
-     * @param value 屏幕亮度值，范围 0~1，0 最暗，1 最亮
-     */
-    success?(ret: { value: number }): void;
+    success?(ret: GetScreenBrightnessResponse): void;
   }
 
   /**
@@ -24,7 +27,7 @@ declare namespace wx {
 
   interface SetKeepScreenOnOptions extends BaseOptions {
     keepScreenOn: boolean;
-    success?(errMsg: string): void;
+    success?(res:ErrMsgResponse): void;
   }
   function setKeepScreenOn(options: SetKeepScreenOnOptions): void;
 }
