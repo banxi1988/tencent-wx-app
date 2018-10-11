@@ -18,7 +18,7 @@ declare namespace wx {
    * 音频输入源
    */
   type AudioSource = "auto" | "buildInMic" | "headsetMic" | "mic" | "camcorder";
-  
+
   interface RecordManagerStartOptions {
     /**
      * 指定录音的时长，单位 ms ，如果传入了合法的 duration ，在到达指定的 duration
@@ -158,6 +158,24 @@ camcorder |	摄像头的麦克风	| Android
      * @param callback  回调函数
      */
     onError(callback: BaseResponse): void;
+
+    /**
+     * 监听录音因为受到系统占用而被中断开始事件。以下场景会触发此事件：微信语音聊天、微信视频聊天。
+     * 此事件触发后，录音会被暂停。pause 事件在此事件后触发
+     *
+     * @since 2.3.0
+     * @param callback 录音因为受到系统占用而被中断开始事件的回调函数
+     */
+    onInterruptionBegin(callback: Function): void;
+
+    /**
+     *
+     * 监听录音中断结束事件。在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。
+     *
+     * @since 2.3.0
+     * @param callback 录音中断结束事件的回调函数
+     */
+    onInterruptionEnd(callback: Function): void;
   }
 
   /**

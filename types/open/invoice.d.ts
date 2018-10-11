@@ -37,4 +37,34 @@ declare namespace wx {
    * 选择用户的发票抬头。
    */
   function chooseInvoiceTitle(options: ChooseInvoiceTitleOptions): void;
+
+  interface InvoiceInfo {
+    /**
+     * 所选发票卡券的 cardId
+     */
+    cardId: string;
+    /**
+     * 所选发票卡券的加密 code，报销方可以通过 cardId 和 encryptCode 获得报销发票的信息
+     */
+    encryptCode: string;
+    /**
+     * 发票方的 appId
+     */
+    publisherAppId: string;
+  }
+
+  interface ChooseInvoiceResponse extends BaseResponse {
+    invoiceInfo: InvoiceInfo;
+  }
+
+  interface ChooseInvoiceOptions extends BaseOptions {
+    success?(res: ChooseInvoiceResponse): void;
+  }
+
+  /**
+   * 选择用户已有的发票
+   * @since 2.3.0
+   * @requires 调用前需要 用户授权 scope.invoice
+   */
+  function chooseInvoice(options: ChooseInvoiceOptions): void;
 }

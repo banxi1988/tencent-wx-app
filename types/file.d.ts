@@ -82,12 +82,20 @@ declare namespace wx {
    * 删除本地存储的文件
    */
   function removeSavedFile(options: RemoveSavedFileOptions): void;
+
+  /**
+   * 文件类型，指定文件类型打开文件，有效值 doc, xls, ppt, pdf, docx, xlsx, pptx
+   */
+  type FileType = "doc" | "xls" | "ppt" | "pdf" | "docx" | "xlsx" | "pptx";
   interface OpenDocumentOptions extends BaseOptions {
     /**
      * 文件路径，可通过 downFile 获得
      */
     filePath: string;
-    fileType?: "doc" | "xls" | "ppt" | "pdf" | "docx" | "xlsx" | "pptx"; // 文件类型，指定文件类型打开文件，有效值 doc, xls, ppt, pdf, docx, xlsx, pptx
+    /**
+     * 文件类型，指定文件类型打开文件，有效值 doc, xls, ppt, pdf, docx, xlsx, pptx
+     */
+    fileType?: FileType;
   }
   /**
    * 新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx
@@ -95,14 +103,30 @@ declare namespace wx {
   function openDocument(options: OpenDocumentOptions): void;
 
   interface GetFileInfoResponse extends BaseResponse {
-    size: number; // 文件大小，单位：B
-    digest: string; // 按照传入的 digestAlgorithm 计算得出的的文件摘要
+    /**
+     * 文件大小，单位：B
+     */
+    size: number;
+    /**
+     *
+     * 按照传入的 digestAlgorithm 计算得出的的文件摘要
+     */
+    digest: string;
   }
 
   interface GetFileInfoOptions extends BaseOptions {
-    filePath: string; // 本地文件路径
-    digestAlgorithm?: "md5" | "sha1"; // 计算文件摘要的算法，默认值 md5，有效值：md5，sha1
-    success?(res: GetFileInfoResponse): void; //接口调用成功的回调函数
+    /* 
+     *  本地文件路径 
+    */
+    filePath: string;
+    /* 
+     *  计算文件摘要的算法，默认值 md5，有效值：md5，sha1 
+    */
+    digestAlgorithm?: "md5" | "sha1";
+    /* 
+     * 接口调用成功的回调函数 
+    */
+    success?(res: GetFileInfoResponse): void;
   }
 
   function getFileInfo(options: GetFileInfoOptions): void;

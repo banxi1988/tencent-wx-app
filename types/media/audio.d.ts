@@ -413,4 +413,26 @@ innerAudioContext.onError((res) => {
 ```
    */
   function createInnerAudioContext(): InnerAudioContext;
+
+  interface SetInnerAudioContextOptionOptions extends BaseOptions {
+    /**
+     * 	是否与其他音频混播，设置为 true 之后，不会终止其他应用或微信内的音乐
+     * @default true
+     */
+    mixWithOther?: boolean;
+    /**
+     *
+     * @note（仅在 iOS 生效）是否遵循静音开关，设置为 false 之后，即使是在静音模式下，也能播放声音
+     * @default true
+     */
+    obeyMuteSwitch?: boolean;
+  }
+
+  /**
+   * 设置 InnerAudioContext 的播放选项，设置之后对当前小程序全局生效
+   * @since 2.3.0
+   */
+  function setInnerAudioOption(
+    options: SetInnerAudioContextOptionOptions
+  ): void;
 }

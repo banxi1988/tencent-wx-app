@@ -5,6 +5,12 @@ declare namespace wx {
      * iBeacon设备广播的 uuids
      */
     uuids: string[];
+    /**
+     * 是否校验蓝牙开关，仅在 iOS 下有效
+     * @default false
+     * @note iOS only
+     */
+    gnoreBluetoothAvailable?: boolean;
     success?(ret: BaseResponse): void;
   }
   /**
